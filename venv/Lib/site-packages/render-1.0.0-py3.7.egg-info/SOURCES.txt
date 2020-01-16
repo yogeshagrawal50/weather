@@ -1,0 +1,16 @@
+AUTHORS
+ChangeLog
+README.md
+RELEASE.md
+render.py
+requirements.txt
+setup.cfg
+setup.py
+render.egg-info/PKG-INFO
+render.egg-info/SOURCES.txt
+render.egg-info/dependency_links.txt
+render.egg-info/entry_points.txt
+render.egg-info/not-zip-safe
+render.egg-info/pbr.json
+render.egg-info/requires.txt
+render.egg-info/top_level.txt
