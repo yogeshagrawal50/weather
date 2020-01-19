@@ -11,6 +11,14 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        .good{backgroud-color :#0C0;}
+        .moderate{backgroud-color :#FFFF00;}
+        .usg{backgroud-color : #FF9900;}
+        .unhealthy{backgroud-color : #FF0000;}
+        .veryunhealthy{backgroud-color : #990066;}
+        .hazardous{backgroud-color :#660000 ;}
+    </style>
 </head>
 <body>
 
@@ -29,8 +37,9 @@
             </li>
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form action="{% url 'home' %}" class="form-inline my-2 my-lg-0" method ="POST">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="search" placeholder="5 Digit ZIP Code" aria-label="Search" name="zipcode">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>

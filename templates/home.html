@@ -1,7 +1,26 @@
 {% extends 'base.html' %}
 <!DOCTYPE html>
 {% block content %}
-Hello world
-<br/>
-    {{ api }}
+
+    <br/>
+    {% if zipcode %}
+        {{ zipcode }}
+    {% endif %}
+    <br/>
+    {% if api %}
+        {% if api == "Error...." %}
+            There was an error, Please try again...
+        {% else %}
+            <div class="jumbotron {{ category_color }}">
+                <h1 class="display-4">{{ api.0.Category.Name }}<br/></h1>
+                <p class="lead">{{ api.0.ReportingArea }} Air Quality : {{ api.0.AQI }}<br/></p>
+
+                <p>{{ category_description }}</p>
+
+
+            </div>
+
+        {% endif %}
+    {% endif %}
+
 {% endblock %}
